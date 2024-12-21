@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { languageTag } from "@/paraglide/runtime.js";
 import { LanguageProvider } from "@inlang/paraglide-next";
 import type { Metadata } from "next";
@@ -28,7 +29,14 @@ export default function RootLayout({
     <LanguageProvider>
       <html lang={languageTag()}>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </LanguageProvider>
