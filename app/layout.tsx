@@ -1,3 +1,5 @@
+import { LanguageProvider } from "@inlang/paraglide-next";
+import { languageTag } from "@/paraglide/runtime.js";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -23,8 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
-    </html>
+    <LanguageProvider>
+      <html lang={languageTag()}>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          {children}
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }
