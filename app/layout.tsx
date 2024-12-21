@@ -1,5 +1,5 @@
-import { LanguageProvider } from "@inlang/paraglide-next";
 import { languageTag } from "@/paraglide/runtime.js";
+import { LanguageProvider } from "@inlang/paraglide-next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
