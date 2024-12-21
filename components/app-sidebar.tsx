@@ -23,7 +23,7 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarRail,
+  useSidebar,
 } from "@/components/ui/sidebar";
 
 // This is sample data.
@@ -157,9 +157,14 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { setOpen } = useSidebar();
+
   return (
     <Sidebar
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
       collapsible="icon"
+      variant="inset"
       {...props}
     >
       <SidebarHeader>
@@ -172,7 +177,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
-      <SidebarRail />
     </Sidebar>
   );
 }
