@@ -73,6 +73,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/types": "^19.5.0",
     "@eslint/eslintrc": "^3",
     "@inlang/paraglide-js": "1.11.3",
     "@playwright/test": "^1.49.1",
