@@ -28,7 +28,9 @@ export default function RootLayout({
   return (
     <LanguageProvider>
       <html lang={languageTag()}>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
