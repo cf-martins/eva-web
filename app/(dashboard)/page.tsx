@@ -3,7 +3,7 @@ import { ChartRadialText } from "@/components/chart-radial-text";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-1 flex-col gap-4">
       <div className="grid auto-rows-min gap-4 md:grid-cols-3">
         <ChartRadialText />
         <ChartRadialText />
