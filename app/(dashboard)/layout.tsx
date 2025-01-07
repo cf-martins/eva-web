@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import { LanguageSelector } from "@/components/language-selector";
 import { ThemeSelector } from "@/components/theme-selector";
 import {
   Breadcrumb,
@@ -47,6 +48,7 @@ export default function DashboardLayout({
           </div>
           <div className="ml-auto">
             <ThemeSelector />
+            <LanguageSelector />
           </div>
         </header>
         <main className="p-4">{children}</main>
