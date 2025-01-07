@@ -45,6 +45,9 @@ export default function DashboardLayout({
               </BreadcrumbList>
             </Breadcrumb>
           </div>
+          <div className="ml-auto">
+            <ThemeSelector />
+          </div>
         </header>
         <main className="p-4">{children}</main>
       </SidebarInset>
