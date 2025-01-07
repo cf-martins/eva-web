@@ -8,7 +8,9 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Link } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import * as m from "@/paraglide/messages";
 
 export function LoginForm({
   className,
@@ -68,22 +70,24 @@ export function LoginForm({
               </div>
               <div className="grid gap-6">
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">{m.sad_smug_elephant_loop()}</Label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="m@example.com"
+                    placeholder="email@example.com"
                     required
                   />
                 </div>
                 <div className="grid gap-2">
                   <div className="flex items-center">
-                    <Label htmlFor="password">Password</Label>
+                    <Label htmlFor="password">
+                      {m.solid_petty_seahorse_spark()}
+                    </Label>
                     <a
                       href="#"
                       className="ml-auto text-sm underline-offset-4 hover:underline"
                     >
-                      Forgot your password?
+                      {m.spry_factual_opossum_reap()}
                     </a>
                   </div>
                   <Input
@@ -95,27 +99,24 @@ export function LoginForm({
                 <Button
                   type="submit"
                   className="w-full"
+                  asChild
                 >
-                  Login
+                  <Link href="/">{m.merry_sweet_skunk_dine()}</Link>
                 </Button>
               </div>
               <div className="text-center text-sm">
-                Don&apos;t have an account?{" "}
+                {m.smug_many_millipede_skip()}{" "}
                 <a
                   href="#"
                   className="underline underline-offset-4"
                 >
-                  Sign up
+                  {m.still_acidic_beaver_nudge()}
                 </a>
               </div>
             </div>
           </form>
         </CardContent>
       </Card>
-      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
-      </div>
     </div>
   );
 }

@@ -22,6 +22,7 @@ export type Payment = {
   amount: number;
   status: "pending" | "processing" | "success" | "failed";
   email: string;
+  createdAt: string;
 };
 
 export const columns: ColumnDef<Payment>[] = [
@@ -82,7 +83,24 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "status",
     header: "Status",
     cell: ({ row }) => {
-      return <Badge>{row.getValue("status")}</Badge>;
+      return (
+        <Badge
+          variant={(() => {
+            switch (row.getValue("status")) {
+              case "pending":
+                return "default";
+              case "processing":
+                return "secondary";
+              case "success":
+                return "outline";
+              case "failed":
+                return "destructive";
+            }
+          })()}
+        >
+          {row.getValue("status")}
+        </Badge>
+      );
     },
   },
   {
@@ -110,6 +128,26 @@ export const columns: ColumnDef<Payment>[] = [
       }).format(amount);
 
       return <div className="text-right font-medium">{formatted}</div>;
+    },
+  },
+  {
+    accessorKey: "createdAt",
+    header: ({ column }) => (
+      <DataTableColumnHeader
+        column={column}
+        title="Created at"
+      />
+    ),
+    cell: ({ row }) => {
+      const date = new Date(row.getValue("createdAt"));
+      return (
+        <div>
+          <div>{date.toLocaleDateString()}</div>
+          <div className="text-xs text-muted-foreground">
+            {date.toLocaleTimeString()}
+          </div>
+        </div>
+      );
     },
   },
 ];
