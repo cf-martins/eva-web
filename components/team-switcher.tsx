@@ -1,8 +1,5 @@
 "use client";
 
-import { ChevronsUpDown, Plus } from "lucide-react";
-import * as React from "react";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,6 +14,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { ChevronsUpDown, Plus } from "lucide-react";
+import * as React from "react";
 
 export function TeamSwitcher({
   teams,
