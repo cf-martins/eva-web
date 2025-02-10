@@ -11,4 +11,4 @@ const lintStagedConfig = {
   "!(*js|*mjs|*jsx|*ts|*mts|*tsx)": [buildPrettierCommand],
 };
 
-export default lintstagedConfig;
+export default lintStagedConfig;
