@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "commit": "cz"
   },
   "dependencies": {
     "next": "15.1.2",
@@ -24,6 +25,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
     "eslint-config-prettier": "^9.1.0",
@@ -34,5 +37,10 @@
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
