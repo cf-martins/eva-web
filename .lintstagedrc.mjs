@@ -6,9 +6,9 @@ const buildEslintCommand = (filenames) =>
 const buildPrettierCommand = (filenames) =>
   `prettier --ignore-unknown --write ${filenames.map((f) => relative(process.cwd(), f)).join(" ")}`;
 
-const lintstagedConfig = {
-  "*.{js,jsx,ts,tsx}": [buildEslintCommand, buildPrettierCommand],
-  "!(*js|*jsx|*ts|*tsx)": [buildPrettierCommand],
+const lintStagedConfig = {
+  "*.{js,mjs,jsx,ts,mts,tsx}": [buildEslintCommand, buildPrettierCommand],
+  "!(*js|*mjs|*jsx|*ts|*mts|*tsx)": [buildPrettierCommand],
 };
 
 export default lintstagedConfig;
