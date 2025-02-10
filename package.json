@@ -16,7 +16,9 @@
     "prepare": "husky",
     "commitlint": "commitlint --edit",
     "pre-commit": "lint-staged",
-    "commit": "cz"
+    "commit": "cz",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "next": "15.1.2",
@@ -25,11 +27,19 @@
     "@inlang/paraglide-next": "0.7.4"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.3",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@commitlint/types": "^19.5.0",
     "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.49.1",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/nextjs": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/test": "^8.4.7",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.1.0",
     "@types/node": "^20",
@@ -41,12 +51,14 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-storybook": "^0.11.1",
     "husky": "^9.1.7",
     "jsdom": "^25.0.1",
     "lint-staged": "^15.2.11",
     "postcss": "^8",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
+    "storybook": "^8.4.7",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4",
@@ -58,5 +70,10 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
 }
