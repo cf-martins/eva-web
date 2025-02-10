@@ -1,5 +1,5 @@
-import Image from "next/image";
 import * as m from "@/paraglide/messages.js";
+import Image from "next/image";
 
 export default function Home() {
   return (
