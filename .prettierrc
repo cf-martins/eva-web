@@ -3,7 +3,7 @@
   "useTabs": false,
   "semi": true,
   "singleQuote": false,
-  "printWidth": 100,
+  "printWidth": 80,
   "arrowParens": "always",
   "trailingComma": "all",
   "bracketSpacing": true,
@@ -11,6 +11,9 @@
   "singleAttributePerLine": true,
   "htmlWhitespaceSensitivity": "ignore",
   "endOfLine": "lf",
-  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
+  "plugins": [
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss"
+  ],
   "tailwindFunctions": ["clsx", "cva", "cn"]
 }
