@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Migrate project from Next.js to React Router
 - Add badge to data table
 - Add data table component
 - Add example chart components to dashboard
