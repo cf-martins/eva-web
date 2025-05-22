@@ -12,10 +12,10 @@
     "test": "npm run test:unit -- run && npm run test:e2e",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
-    "lint": "next lint --dir .",
-    "lint:fix": "next lint --fix --dir .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
     "pre-commit": "lint-staged",
@@ -32,6 +32,7 @@
     "react-router": "^7.5.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@playwright/test": "^1.52.0",
     "@react-router/dev": "^7.5.3",
     "@tailwindcss/vite": "^4.1.4",
