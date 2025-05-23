@@ -1,7 +1,15 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
-  "files": { "ignoreUnknown": false, "ignore": [] },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": [
+      "**/pnpm-lock.yaml",
+      ".husky/_/",
+      "**/project.inlang/",
+      "paraglide/"
+    ]
+  },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
@@ -11,8 +19,7 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "auto",
-    "bracketSpacing": true,
-    "ignore": ["**/pnpm-lock.yaml", ".husky/_/", "**/project.inlang/"]
+    "bracketSpacing": true
   },
   "organizeImports": { "enabled": true },
   "linter": { "enabled": true, "rules": { "recommended": true } },
