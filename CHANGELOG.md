@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Set up Git hooks
 - Migrate to Biome for formatting and linting
 - Migrate project from Next.js to React Router
 - Add badge to data table
