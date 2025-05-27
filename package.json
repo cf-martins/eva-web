@@ -19,7 +19,8 @@
     "commitlint": "commitlint --edit",
     "commit": "cz",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "machine-translate": "inlang machine translate --project project.inlang"
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.6.0",
@@ -35,6 +36,8 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/types": "^19.8.1",
+    "@inlang/cli": "^3.0.0",
+    "@inlang/paraglide-js": "2.0.13",
     "@playwright/test": "^1.52.0",
     "@react-router/dev": "^7.5.3",
     "@tailwindcss/vite": "^4.1.4",

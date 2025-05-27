@@ -6,9 +6,11 @@ import {
   ScrollRestoration,
   isRouteErrorResponse,
 } from "react-router";
-
 import type { Route } from "./+types/root";
 import "./app.css";
+import { localeMiddleware } from "./middleware";
+
+export const unstable_middleware = [localeMiddleware];
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },

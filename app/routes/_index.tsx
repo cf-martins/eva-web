@@ -1,5 +1,5 @@
-import { Welcome } from "../welcome/welcome";
-import type { Route } from "./+types/home";
+import { m } from "~/paraglide/messages";
+import type { Route } from "./+types/_index";
 
 // biome-ignore lint/correctness/noEmptyPattern:
 export function meta({}: Route.MetaArgs) {
@@ -10,5 +10,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function IndexPage() {
-  return <Welcome />;
+  return m.example_message({ username: "Paraglide" });
 }

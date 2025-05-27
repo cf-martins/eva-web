@@ -1,4 +1,6 @@
-import type { RouteConfig } from "@react-router/dev/routes";
+import { prefix, type RouteConfig } from "@react-router/dev/routes";
 import { flatRoutes } from "@react-router/fs-routes";
 
-export default flatRoutes() satisfies RouteConfig;
+export default [
+  ...prefix(":locale?", await flatRoutes()),
+] satisfies RouteConfig;
