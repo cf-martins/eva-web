@@ -1,4 +1,5 @@
-import { m } from "~/paraglide/messages";
+import { css } from "~/styled-system/css";
+import { center } from "~/styled-system/patterns";
 import type { Route } from "./+types/_index";
 
 // biome-ignore lint/correctness/noEmptyPattern:
@@ -10,5 +11,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function IndexPage() {
-  return m.example_message({ username: "Paraglide" });
+  return (
+    <div className={center({ minHeight: "dvh" })}>
+      <h1 className={css({ fontSize: "2xl", fontWeight: "bold" })}>
+        Welcome to the home page
+      </h1>
+    </div>
+  );
 }

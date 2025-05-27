@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare": "panda codegen",
     "build": "react-router build",
     "dev": "react-router dev",
     "dev:inspect": "NODE_OPTIONS='--inspect' react-router dev",
@@ -38,19 +39,19 @@
     "@commitlint/types": "^19.8.1",
     "@inlang/cli": "^3.0.0",
     "@inlang/paraglide-js": "2.0.13",
+    "@pandacss/dev": "^0.53.7",
     "@playwright/test": "^1.52.0",
     "@react-router/dev": "^7.5.3",
-    "@tailwindcss/vite": "^4.1.4",
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "lefthook": "^1.11.13",
-    "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.1.4"
-  }
+  },
+  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
 }
