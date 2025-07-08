@@ -15,8 +15,8 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       >
         <StyledPagination.PrevTrigger asChild>
           <IconButton
-            variant="ghost"
             aria-label="Next Page"
+            variant="ghost"
           >
             <ChevronLeftIcon />
           </IconButton>
@@ -26,7 +26,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
             pagination.pages.map((page, index) =>
               page.type === "page" ? (
                 <StyledPagination.Item
-                  // biome-ignore lint/suspicious/noArrayIndexKey:
+                  // biome-ignore lint/suspicious/noArrayIndexKey: false positive
                   key={index}
                   {...page}
                   asChild
@@ -35,9 +35,9 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
                 </StyledPagination.Item>
               ) : (
                 <StyledPagination.Ellipsis
-                  // biome-ignore lint/suspicious/noArrayIndexKey:
-                  key={index}
                   index={index}
+                  // biome-ignore lint/suspicious/noArrayIndexKey: false positive
+                  key={index}
                 >
                   &#8230;
                 </StyledPagination.Ellipsis>
@@ -47,8 +47,8 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
         </StyledPagination.Context>
         <StyledPagination.NextTrigger asChild>
           <IconButton
-            variant="ghost"
             aria-label="Next Page"
+            variant="ghost"
           >
             <ChevronRightIcon />
           </IconButton>
@@ -62,34 +62,34 @@ Pagination.displayName = "Pagination";
 
 const ChevronLeftIcon = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <title>Chevron Left Icon</title>
     <path
+      d="m15 18l-6-6l6-6"
       fill="none"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
-      d="m15 18l-6-6l6-6"
     />
   </svg>
 );
 
 const ChevronRightIcon = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <title>Chevron Right Icon</title>
     <path
+      d="m9 18l6-6l-6-6"
       fill="none"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
-      d="m9 18l6-6l-6-6"
     />
   </svg>
 );

@@ -20,9 +20,9 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
 
     return (
       <StyledSpinner
-        ref={ref}
         borderBottomColor="transparent"
         borderLeftColor="transparent"
+        ref={ref}
         {...rest}
       >
         {label && <styled.span srOnly>{label}</styled.span>}

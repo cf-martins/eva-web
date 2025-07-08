@@ -1,5 +1,5 @@
 "use client";
-import { type ReactNode, forwardRef } from "react";
+import { forwardRef, type ReactNode } from "react";
 import * as StyledSlider from "./styled/slider";
 
 export interface SliderProps extends StyledSlider.RootProps {
@@ -11,7 +11,7 @@ export interface SliderProps extends StyledSlider.RootProps {
 }
 
 export const Slider = forwardRef<HTMLDivElement, SliderProps>((props, ref) => {
-  const { children, marks, ...rootProps } = props;
+  const { children, ...rootProps } = props;
 
   return (
     <StyledSlider.Root
@@ -28,9 +28,9 @@ export const Slider = forwardRef<HTMLDivElement, SliderProps>((props, ref) => {
               </StyledSlider.Track>
               {api.value.map((_, index) => (
                 <StyledSlider.Thumb
-                  // biome-ignore lint/suspicious/noArrayIndexKey:
-                  key={index}
                   index={index}
+                  // biome-ignore lint/suspicious/noArrayIndexKey: false positive
+                  key={index}
                 >
                   <StyledSlider.HiddenInput />
                 </StyledSlider.Thumb>

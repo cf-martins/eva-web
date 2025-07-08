@@ -35,5 +35,5 @@ export const Image = withContext<
   Assign<HTMLStyledProps<"img">, Avatar.ImageBaseProps>
 >(Avatar.Image, "image");
 
-export { AvatarContext as Context } from "@ark-ui/react/avatar";
 export type { AvatarStatusChangeDetails as StatusChangeDetails } from "@ark-ui/react/avatar";
+export { AvatarContext as Context } from "@ark-ui/react/avatar";

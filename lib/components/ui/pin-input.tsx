@@ -23,9 +23,9 @@ export const PinInput = forwardRef<HTMLDivElement, PinInputProps>(
         <StyledPinInput.Control>
           {Array.from({ length }, (_, index) => index).map((id, index) => (
             <StyledPinInput.Input
-              key={id}
-              index={index}
               asChild
+              index={index}
+              key={id}
             >
               <Input size={rootProps.size} />
             </StyledPinInput.Input>

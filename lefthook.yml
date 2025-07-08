@@ -1,4 +1,15 @@
 pre-commit:
+  jobs:
+    - run: npx ultracite format
+      glob:
+        - "*.js"
+        - "*.jsx"
+        - "*.ts"
+        - "*.tsx"
+        - "*.json"
+        - "*.jsonc"
+        - "*.css"
+      stage_fixed: true
   commands:
     check:
       run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}

@@ -45,6 +45,6 @@ export const Label = withContext<
 
 export {
   RatingGroupContext as Context,
-  RatingGroupItemContext as ItemContext,
   RatingGroupHiddenInput as HiddenInput,
+  RatingGroupItemContext as ItemContext,
 } from "@ark-ui/react/rating-group";

@@ -19,9 +19,9 @@ export const TreeView = forwardRef<HTMLDivElement, StyledTreeView.RootProps>(
           {/* @ts-expect-error */}
           {props.collection.rootNode.children.map((node, index) => (
             <TreeNode
+              indexPath={[index]}
               key={node.id}
               node={node}
-              indexPath={[index]}
             />
           ))}
         </StyledTreeView.Tree>
@@ -36,9 +36,9 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
   const { node, indexPath } = props;
   return (
     <StyledTreeView.NodeProvider
+      indexPath={indexPath}
       key={node.id}
       node={node}
-      indexPath={indexPath}
     >
       {node.children ? (
         <StyledTreeView.Branch>
@@ -55,9 +55,9 @@ const TreeNode = (props: StyledTreeView.NodeProviderProps) => {
             {/* @ts-expect-error */}
             {node.children.map((child, index) => (
               <TreeNode
+                indexPath={[...indexPath, index]}
                 key={child.id}
                 node={child}
-                indexPath={[...indexPath, index]}
               />
             ))}
           </StyledTreeView.BranchContent>

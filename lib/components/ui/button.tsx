@@ -25,16 +25,20 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...rest}
       >
-        {loading && !loadingText ? (
-          <>
-            <ButtonSpinner />
-            <styled.span opacity={0}>{children}</styled.span>
-          </>
-        ) : loadingText ? (
-          loadingText
-        ) : (
-          children
-        )}
+        {(() => {
+          if (loading && !loadingText) {
+            return (
+              <>
+                <ButtonSpinner />
+                <styled.span opacity={0}>{children}</styled.span>
+              </>
+            );
+          }
+          if (loadingText) {
+            return loadingText;
+          }
+          return children;
+        })()}
       </StyledButton>
     );
   },
@@ -45,17 +49,17 @@ Button.displayName = "Button";
 const ButtonSpinner = () => (
   <Center
     inline
-    position="absolute"
-    transform="translate(-50%, -50%)"
-    top="50%"
     insetStart="50%"
+    position="absolute"
+    top="50%"
+    transform="translate(-50%, -50%)"
   >
     <Spinner
-      width="1.1em"
-      height="1.1em"
-      borderWidth="1.5px"
-      borderTopColor="fg.disabled"
       borderRightColor="fg.disabled"
+      borderTopColor="fg.disabled"
+      borderWidth="1.5px"
+      height="1.1em"
+      width="1.1em"
     />
   </Center>
 );

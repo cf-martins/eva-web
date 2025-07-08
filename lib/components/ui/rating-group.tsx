@@ -20,8 +20,8 @@ export const RatingGroup = forwardRef<HTMLDivElement, RatingGroupProps>(
             {({ items }) =>
               items.map((index) => (
                 <StyledRatingGroup.Item
-                  key={index}
                   index={index}
+                  key={index}
                 >
                   <StyledRatingGroup.ItemContext>
                     {(item) => <StarIcon isHalf={item.half} />}
@@ -45,15 +45,15 @@ type IconProps = {
 
 const StarIcon = (props: IconProps) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
     fill="inherit"
+    height="24"
     stroke="inherit"
-    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <title>Star Icon</title>
     <defs>
